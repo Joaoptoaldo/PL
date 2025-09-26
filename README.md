@@ -1,4 +1,6 @@
 # Programação Linear (PL)
+![PL](images/imagem.png)
+
 
 Repositório dedicado a **Programação Linear**, uma técnica de otimização matemática usada para **maximizar ou minimizar objetivos** respeitando certas restrições.
 
