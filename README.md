@@ -40,3 +40,11 @@ model.solve()
 
 print(f"Produzir {x.value()} canetas e {y.value()} cadernos")
 print(f"Lucro máximo: {model.objective.value()}")
+
+# x e y são as quantidades de cada produto a serem produzidas
+
+# model += x + y é a função objetivo que queremos maximizar (os pontos)
+
+# As restrições garantem que não ultrapassamos a capacidade de produção nem os recursos disponíveis
+
+# model.solve() encontra a solução ótima
