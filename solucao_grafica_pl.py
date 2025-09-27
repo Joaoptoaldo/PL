@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 def plot(titulo, xmax, ymax):
     plt.grid(True, which='both', linestyle='--', linewidth=0.5)
     plt.xlim(0,xmax);plt.ylim(0,ymax)
-    plt.xlabel('eixo - x');plt.ylabel('eixo - y')
+    plt.xlabel('eixo - x')
+    plt.ylabel('eixo - y')
     plt.legend()
     plt.title(titulo)
 
