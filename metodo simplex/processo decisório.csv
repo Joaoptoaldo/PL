@@ -1,0 +1,13 @@
+﻿Z;X1;X2;X3;Xf1;Xf2;b;
+(linha 1) 0;3;3;2;1;0;30;30 div por 3 = 10
+(linha 2) 0;6;3;0;0;1;48;48 div por 6 = 8 -> menor valor
+(valores de Z) 1;-10;-8;-1;0;0;0;
+;coluna pivo -> menor valor  ;;;;;;
+;;;;;;;
+nova linha 2;l2  div por 6;;;;;;
+(linha 2) 0;6;3;0;0;1;48;
+(nova linha 2)0;1;01/jan;0;0;1;8;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;; ;
