@@ -39,10 +39,10 @@ Monte uma tabela com:
 
 Exemplo:
 
-| Básica | x₁ | x₂ | s₁ | s₂ | Solução |
+| Base   | x₁ | x₂ | f₁ | f₂ | Solução |
 |--------|----|----|----|----|---------|
-| s₁     | a₁₁| a₁₂|  1 |  0 |   b₁    |
-| s₂     | a₂₁| a₂₂|  0 |  1 |   b₂    |
+| f₁     | a₁₁| a₁₂|  1 |  0 |   b₁    |
+| f₂     | a₂₁| a₂₂|  0 |  1 |   b₂    |
 | Z      | -c₁| -c₂|  0 |  0 |    0    |
 
 ---
@@ -99,20 +99,75 @@ x₁, x₂ ≥ 0
 
 1. Inclua folgas:
    ```
-   x₁ + x₂ + s₁ = 4   
-   x₁      + s₂ = 2   
-        x₂ + s₃ = 3
+   x₁ + x₂ + f₁ = 4   
+   x₁      + f₂ = 2   
+        x₂ + f₃ = 3
    ```
 
 2. Tabela inicial:
-
    
-| Básica | x₁ | x₂ | s₁ | s₂ | s₃ | Sol |
+   
+| Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
 |--------|----|----|----|----|----|-----|
-| s₁     |  1 |  1 |  1 |  0 |  0 |  4  |
-| s₂     |  1 |  0 |  0 |  1 |  0 |  2  |
-| s₃     |  0 |  1 |  0 |  0 |  1 |  3  |
+| f₁     |  1 |  1 |  1 |  0 |  0 |  4  |
+| f₂     |  1 |  0 |  0 |  1 |  0 |  2  |
+| f₃     |  0 |  1 |  0 |  0 |  1 |  3  |
 | Z      | -3 | -2 |  0 |  0 |  0 |  0  |
+
+
+3. Olhe os coeficientes negativos na linha Z.
+   O mais negativo é o -3 (coluna x₁).
+   x₁ entra na base.
+
+
+| Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
+|--------|----|----|----|----|----|-----|
+| f₁     |  1 |  1 |  1 |  0 |  0 |  4  |
+| f₂     |  1 |  0 |  0 |  1 |  0 |  2  |
+| f₃     |  0 |  1 |  0 |  0 |  1 |  3  |
+| Z      | -3 | -2 |  0 |  0 |  0 |  0  |
+                ^
+                |
+
+4. Divida os valores da coluna Sol pelo coef. de x₁ nas restrições:
+
+    s₁: 4 / 1 = 4
+    s₂: 2 / 1 = 2
+   
+f₃: 3 / 0 = ∞ (ignora, pois não pode dividir por zero)
+Menor quociente positivo é 2 (f₂).
+s₂ sai da base.
+
+
+| Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
+|--------|----|----|----|----|----|-----|
+| f₁     |  1 |  1 |  1 |  0 |  0 |  4  |
+| f₂     |  1 |  0 |  0 |  1 |  0 |  2  | <-
+| f₃     |  0 |  1 |  0 |  0 |  1 |  3  |
+| Z      | -3 | -2 |  0 |  0 |  0 |  0  |
+
+
+4. Ajuste a linha de f₂ para que o coeficiente de x₁ vire 1 (dividindo pelo mesmo valor pivo):
+
+  - Linha pivô: divide toda f₂ por 1 (já está assim).
+  - Zere os outros valores de x₁ usando operações entre linhas, usando a formula:
+    
+        No caso do exemplo:
+    
+        Novas linhas: linha antiga - Coeficiente pivo(1) x nova linha pivo(x2)
+  
+
+
+| Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
+|--------|----|----|----|----|----|-----|
+| f₁     |  0 |  1 |  1 | -1 |  0 |  2  |  -> coluna ajustada 
+| x₂     |  1 |  0 |  0 |  1 |  0 |  2  |  -> nova linha pivo
+| f₃     |  0 |  1 |  0 |  0 |  1 |  3  |  -> permance igual pois o coeficiente já está zerado
+| Z      | -3 | -2 |  0 |  0 |  0 |  0  |
+
+
+
+
 
 ---
 
