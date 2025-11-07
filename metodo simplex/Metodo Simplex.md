@@ -192,11 +192,11 @@ E zerar x1 nas linhas restantes (linha Z) utilizando a mesma fórmula:
       x₁: 2 / 0 = ∞ (ignora)
       f₃: 3 / 1 = 3
     
-Menor quociente: 2 (s₁ sai da base).
+  Menor quociente: 2 (s₁ sai da base).
 
 6. Segundo Pivoteamento (x₂ entra, s₁ sai)
 
-- utilizando as mesmas fórmulas anteriores para zerar a coluna (x2)
+- Utilizando as mesmas fórmulas anteriores para zerar a coluna (x2)
 
       Novas linhas: linha antiga +/- Coeficiente pivo  x nova linha pivo (x2)
 
@@ -213,8 +213,14 @@ Menor quociente: 2 (s₁ sai da base).
    - Como não há mais coeficientes negativos na linha Z, chegamos à solução ótima.
 
     - Variáveis básicas: x₁ = 2 (linha x₁, coluna Sol), x₂ = 2 (linha x₂, Sol)
-   -  Variáveis não básicas: f₁ e f₂ não estão na base → valem 0
-   -  Valor ótimo: Z = 10
+    - Variáveis não básicas: f₁ e f₂ não estão na base → valem 0
+    - Valor ótimo: Z = 10
+
+Resumo da solução
+
+    x₁ = 2
+    x₂ = 2
+    Z = 3x₁ + 2x₂ = 32 + 22 = 6 + 4 = 10
    
 ---
 
