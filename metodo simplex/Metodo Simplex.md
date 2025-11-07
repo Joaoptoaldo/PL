@@ -126,8 +126,8 @@ x₁, x₂ ≥ 0
 | f₂     |  1 |  0 |  0 |  1 |  0 |  2  |
 | f₃     |  0 |  1 |  0 |  0 |  1 |  3  |
 | Z      | -3 | -2 |  0 |  0 |  0 |  0  |
-                ^
-                |
+
+                
 
 4. Divida os valores da coluna Sol pelo coef. de x₁ nas restrições:
 
@@ -160,15 +160,31 @@ s₂ sai da base.
 
 | Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
 |--------|----|----|----|----|----|-----|
-| f₁     |  0 |  1 |  1 | -1 |  0 |  2  |  -> coluna ajustada 
-| x₂     |  1 |  0 |  0 |  1 |  0 |  2  |  -> nova linha pivo
-| f₃     |  0 |  1 |  0 |  0 |  1 |  3  |  -> permance igual pois o coeficiente já está zerado
+| f₁     |  0 |  1 |  1 | -1 |  0 |  2  |  
+| x₂     |  1 |  0 |  0 |  1 |  0 |  2  |  
+| f₃     |  0 |  1 |  0 |  0 |  1 |  3  |  
 | Z      | -3 | -2 |  0 |  0 |  0 |  0  |
 
 
+- x2: Coluna ajustada
+- f1: Nova linha pivo
+- f3: Permance igual pois o coeficiente já está zerado
 
 
+5. Na linha Z, o coeficiente negativo é -2 (x₂).
+   x₂ entra na base.
 
+   Divida Sol por coef. de x₂:
+
+    s₁: 2 / 1 = 2
+    x₁: 2 / 0 = ∞ (ignora)
+    s₃: 3 / 1 = 3
+   
+  Menor quociente: 2 (s₁ sai da base).
+
+7. Segundo Pivoteamento (x₂ entra, s₁ sai)
+
+   
 ---
 
 ## Observações
@@ -176,9 +192,4 @@ s₂ sai da base.
 - O método Simplex pode ser aplicado para problemas de **maximização** com restrições do tipo ≤ e variáveis ≥ 0.
 - Para restrições de outros tipos ou variáveis livres, utilize transformações adequadas (adicionar variáveis artificiais, multiplicar por -1, etc).
 
----
 
-## Fontes
-
-- Winston, W.L. Pesquisa Operacional: Aplicações e Algoritmos.
-- Hillier, F.S.; Lieberman, G.J. Introdução à Pesquisa Operacional.
