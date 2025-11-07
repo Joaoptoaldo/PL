@@ -147,7 +147,7 @@ x₁, x₂ ≥ 0
 | Z      | -3 | -2 |  0 |  0 |  0 |  0  |
 
 
-4. Ajuste a linha de f₂ para que o coeficiente de x₁ vire 1 (dividindo pelo mesmo valor pivo):
+4. Ajuste a linha de f₂ para que o coeficiente de x₁ vire 1 (dividindo pelo mesmo valor pivo, então se o valor pivo fosse 3, seria 3 dividido pela linha pivo):
 
   - Linha pivô: divide toda f₂ por 1 (já está assim).
   - Zere os outros valores de x₁ usando operações entre linhas, usando a fórmula:
