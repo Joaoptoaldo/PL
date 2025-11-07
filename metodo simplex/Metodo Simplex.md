@@ -116,8 +116,9 @@ x₁, x₂ ≥ 0
 
 
 3. Olhe os coeficientes negativos na linha Z.
-   O mais negativo é o -3 (coluna x₁).
-   x₁ entra na base.
+   
+       O mais negativo é o -3 (coluna x₁).
+       x₁ entra na base.
 
 
 | Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
@@ -131,18 +132,17 @@ x₁, x₂ ≥ 0
 
 4. Divida os valores da coluna Sol pelo coef. de x₁ nas restrições:
 
-    f₁: 4 / 1 = 4
-    f₂: 2 / 1 = 2
+        f₁: 4 / 1 = 4
+        f₂: 2 / 1 = 2
    
-f₃: 3 / 0 = ∞ (ignora, pois não pode dividir por zero)
-Menor quociente positivo é 2 (f₂).
-f₂ sai da base.
+   f₃: 3 / 0 = ∞ (ignora, pois não pode dividir por zero)
+   Menor quociente positivo é 2 (f₂). f₂ sai da base.
 
 
 | Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
 |--------|----|----|----|----|----|-----|
 | f₁     |  1 |  1 |  1 |  0 |  0 |  4  |
-| f₂     |  1 |  0 |  0 |  1 |  0 |  2  | <-
+| f₂     |  1 |  0 |  0 |  1 |  0 |  2  | 
 | f₃     |  0 |  1 |  0 |  0 |  1 |  3  |
 | Z      | -3 | -2 |  0 |  0 |  0 |  0  |
 
@@ -166,19 +166,19 @@ f₂ sai da base.
 | Z      | -3 | -2 |  0 |  0 |  0 |  0  |
 
 
-- x1: Coluna ajustada
-- f1: Nova linha pivo
+- x1: Linha pivo 
+- f1: Nova linha ajustada 
 - f3: Permance igual pois o coeficiente já está zerado
 
-E por fim zerar x1 nas linhas restantes (linha Z) utilizando a mesma fórmula:
+E zerar x1 nas linhas restantes (linha Z) utilizando a mesma fórmula:
 
-       Novas linhas: linha antiga (linha Z) + Coeficiente pivo(3) x nova linha pivo(x2)
+    Novas linhas: linha antiga (linha Z) + Coeficiente pivo(-3) x nova linha pivo(x2)
    
 
 | Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
 |--------|----|----|----|----|----|-----|
 | f₁     |  0 |  1 |  1 | -1 |  0 |  2  |  
-| x₂     |  1 |  0 |  0 |  1 |  0 |  2  |  
+| x1     |  1 |  0 |  0 |  1 |  0 |  2  |  
 | f₃     |  0 |  1 |  0 |  0 |  1 |  3  |  
 | Z      |  0 | -2 |  0 |  3 |  0 |  6  |
 
@@ -187,17 +187,35 @@ E por fim zerar x1 nas linhas restantes (linha Z) utilizando a mesma fórmula:
   Na linha Z, o coeficiente mais negativo agora é o -2 (x₂)
   x₂ entra na base.
 
-Divida Sol por coef. de x₂:
+  Divida Sol por coef. de x₂:
 
-  s₁: 2 / 1 = 2
-  x₁: 2 / 0 = ∞ (ignora)
-  s₃: 3 / 1 = 3
+    f₁: 2 / 1 = 2
+    x₁: 2 / 0 = ∞ (ignora)
+    f₃: 3 / 1 = 3
   
 Menor quociente: 2 (s₁ sai da base).
 
 6. Segundo Pivoteamento (x₂ entra, s₁ sai)
 
-   
+utilizando as mesmas fórmulas anteriores para zerar a coluna (x2)
+
+    Novas linhas: linha antiga +/- Coeficiente pivo  x nova linha pivo (x2)
+
+
+| Base   | x₁ | x₂ | f₁ | f₂ | f₃ | Sol |
+|--------|----|----|----|----|----|-----|
+| x2     |  0 |  1 |  1 | -1 |  0 |  2  |  
+| x1     |  1 |  0 |  0 |  1 |  0 |  2  |  
+| f₃     |  0 |  0 | -1 |  1 |  1 |  1  |  
+| Z      |  0 |  0 |  2 |  1 |  0 | 10  |
+
+
+7. Solução ótima
+   Como não há mais coeficientes negativos na linha Z, chegamos à solução ótima.
+
+    Variáveis básicas: x₁ = 2 (linha x₁, coluna Sol), x₂ = 2 (linha x₂, Sol)
+    Variáveis não básicas: f₁ e f₂ não estão na base → valem 0
+    Valor ótimo: Z = 10
    
 ---
 
